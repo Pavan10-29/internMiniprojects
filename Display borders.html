@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        .hidden *{
+            border: none !important;
+            border-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="radio" name="tableDisplay" id="display" onclick="displayTableBorders()"> <label for="display">Display</label>
+    <input type="radio" name="tableDisplay" id="hide" onclick="hideTableBorders()"> <label for="hide">Hide</label>
+
+    <br><br>
+
+    <table id="myTable" class="hidden">
+        <tr>
+            <th>Student Name</th>
+            <th>Student Id</th>
+            <th>Student Marks</th>
+        </tr>
+        <tr>
+            <td>Aruna</td>
+            <td>1 </td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>Rajani</td>
+            <td>2</td>
+            <td>98 </td>
+        </tr>
+        <tr>
+            <td>Siva </td>
+            <td>3 </td>
+            <td>97 </td>
+        </tr>
+    </table>
+
+    <script>
+        function displayTableBorders() {
+            let table = document.getElementById("myTable");
+            table.classList.remove("hidden");
+        }
+
+        function hideTableBorders() {
+            let table = document.getElementById("myTable");
+            console.log(table);
+            table.classList.add("hidden");
+        }
+    </script>
+
+</body>
+
+</html>
